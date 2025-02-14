@@ -1,21 +1,17 @@
-# Board Project
+# Board Project 📋
 
-## 기술 스택 및 설정
-
+## 🛠 Tech Stack
 ### Frontend
-
--   Next.js
--   TypeScript
--   GraphQL (Apollo Client)
--   CSS Module
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=Next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=white)
+![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=flat&logo=GraphQL&logoColor=white)
+![Apollo Client](https://img.shields.io/badge/Apollo_Client-311C87?style=flat&logo=Apollo-GraphQL&logoColor=white)
+![CSS Modules](https://img.shields.io/badge/CSS_Modules-000000?style=flat&logo=CSS3&logoColor=white)
 
 ### Backend
+![GraphQL API](https://img.shields.io/badge/GraphQL_API-E10098?style=flat&logo=GraphQL&logoColor=white)
 
--   GraphQL API
-
-## 프로젝트 구조
-
-```bash
+## 📁 Project Structure
 src/
 ├── app/
 │   ├── boards/
@@ -28,72 +24,69 @@ src/
 │   │   ├── pagination/           # 페이지네이션
 │   │   └── search/               # 검색 컴포넌트
 │   ├── boards-write/            # 게시글 작성 관련
-│   │   ├── hook.ts
-│   │   ├── index.tsx
-│   │   ├── queries.ts
-│   │   ├── styles.module.css
-│   │   └── types.ts
 │   └── boards-detail/          # 게시글 상세 관련
-│       ├── detail/             # 게시글 상세 내용
-│       ├── comment-write/      # 댓글 작성
-│       └── comment-list/       # 댓글 목록
 └── commons/
-    └── graphql/              # GraphQL 관련 파일
+└── graphql/              # GraphQL 관련 파일
+## 🔍 주요 기능
 
+### 1. 게시글 목록
+- 📋 **목록 조회**
+  - 페이지네이션 기반 게시글 목록
+  - 게시글 상세페이지 연동
+  - 동적 넘버링 시스템
 
-  ## 주요 기능
+- 🔍 **검색 시스템**
+  - 디바운싱 적용된 제목 검색
+  - 날짜 기반 필터링
+  - 검색어 하이라이트 기능
 
-### 1. 게시글 목록 (Read - List)
-* **목록 조회**
-  * 게시글 목록 표시
-  * 페이지네이션 구현
-  * 게시글 클릭 시 상세페이지 이동
-  * 넘버링 표시
+### 2. 게시글 관리
+- ✏️ **통합 입력 폼**
+  - 사용자 정보 입력 및 검증
+  - 실시간 유효성 검사
+  - 상태 피드백 시스템
 
-* **검색 기능**
-  * 제목 검색 (디바운싱 적용)
-  * 날짜별 필터링
-  * 검색어 하이라이트 처리
+- 🎨 **멀티미디어 지원**
+  - 이미지 업로드 (5MB 제한)
+  - 다음 우편번호 API 연동
+  - 유튜브 콘텐츠 통합
 
-### 2. 게시글 등록/수정 (Create/Update)
-* **통합 입력 폼**
-  * 작성자, 비밀번호, 제목, 내용 입력
-  * 유효성 검증
-  * 성공/실패 처리
+### 3. 상세 페이지
+- 📝 **콘텐츠 표시**
+  - 반응형 이미지 갤러리
+  - 유튜브 영상 임베딩
+  - 주소 정보 인터랙티브 툴팁
 
-* **부가 기능**
-  * 이미지 업로드 (최대 5MB)
-  * 주소 검색 (다음 우편번호 API)
-  * 유튜브 URL 등록
-
-### 3. 게시글 상세 (Read - Detail)
-* **상세 정보**
-  * 게시글 내용 표시
-  * 이미지 갤러리
-  * 유튜브 영상 임베드
-  * 주소 정보 툴팁
-
-* **관리 기능**
-  * 수정/삭제 기능
-  * 비밀번호 검증
+- 🔒 **보안 기능**
+  - 비밀번호 기반 수정/삭제
+  - 접근 권한 관리
 
 ### 4. 댓글 시스템
-* **기본 CRUD**
-  * 댓글 작성
-  * 수정/삭제 (비밀번호 검증)
-  * 작성자, 내용 입력
+- 💬 **실시간 상호작용**
+  - CRUD 기능 완비
+  - 무한 스크롤 구현
+  - 실시간 업데이트
+    
+## 🌟 개발 특징
+### 프론트엔드 최적화
+Apollo Client를 활용한 효율적인 상태 관리
+CSS Modules로 스타일 격리 구현
+TypeScript 기반 타입 안정성 확보
 
-* **UX**
-  * 무한 스크롤
-  * 실시간 업데이트
+## 🚀 시작하기
 
-  # 의존성 설치
+```bash
+# 의존성 설치
 npm install
+# or
 yarn install
 
 # 개발 서버 실행
-npm run dev or yarn add
+npm run dev
+# or
+yarn dev
 
 # GraphQL 타입 생성
 npm run codegen
-```
+
+
